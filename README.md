@@ -135,3 +135,18 @@ app.listen(8000);
 
 console.log('Server running at http://127.0.0.1:8000');
 ```
+
+## Lab 2.10: Building an API server
+To list and save tasks. And yay! Finally done with the Hello World!
+
+```
+$ mkdir tasks && cd tasks
+
+$ npm init
+...
+
+$ npm install --save express
+$ npm install --save express-session
+
+$ touch index.js
+```
