@@ -23,3 +23,37 @@ exports.hello = function () {
 var greet = require('./greet.js');
 console.log(greet.hello());
 ```
+
+## Lab 2.4: Requiring things
+Let’s get bilingual
+
+**greet.js**
+```javascript
+exports.hello = function () {
+	return 'Hello NTU';
+}
+exports.konbanwa = function () {
+	return 'Konbanwa NTU';
+}
+```
+**index.js**
+```javascript
+var greet = require('./greet.js');
+console.log(greet.hello());
+console.log(greet.konbanwa());
+```
+
+## Lab 2.5: Requiring things
+Another way of handling exports
+
+**greet.js**
+```javascript
+module.exports = {
+	hello: function () {
+		return 'Hello NTU';
+	},
+	konbanwa: function () {
+		return 'Konbanwa NTU';
+	}
+}
+```
