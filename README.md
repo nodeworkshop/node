@@ -57,3 +57,19 @@ module.exports = {
 	}
 }
 ```
+
+## Lab 2.6: Create a better (Hello) World
+By building a web server
+
+**index.js**
+```javascript
+var http = require('http');
+var greet = require('./greet.js');
+
+http.createServer(function (req, res) {
+	res.writeHead(200, {'Content-Type': 'text/plain'});
+	res.end(greet.hello());
+}).listen(8000);
+
+console.log('Server running at http://127.0.0.1:8000');
+```
