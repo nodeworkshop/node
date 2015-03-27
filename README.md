@@ -73,3 +73,48 @@ http.createServer(function (req, res) {
 
 console.log('Server running at http://127.0.0.1:8000');
 ```
+
+## Lab 2.7: Initializing your Hello World project
+It's just `npm init`... easy peasy :)
+
+## Lab 2.8: Saving the moment
+Installing and using a 3rd party module
+
+```
+$ npm install --save moment
+```
+
+```javascript
+var http = require('http');
+var greet = require('./greet.js');
+var moment = require('moment');
+
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Hi! It is now ' + moment().format('h:mm:ss a'));
+}).listen(8000);
+
+console.log('Server running at http://127.0.0.1:8000');
+```
+
+## Lab 2.9: Expressive greetings
+Modify your Hello World code to use Express
+
+```
+$ npm install --save express
+```
+
+**index.js**
+```javascript
+var express = require('express');
+var greet = require('./greet.js');
+var app = express();
+
+app.get('/', function (req, res) {
+	res.send(greet.hello());
+});
+
+app.listen(8000);
+
+console.log('Server running at http://127.0.0.1:8000');
+```
