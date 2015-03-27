@@ -100,6 +100,7 @@ Installing and using a 3rd party module
 $ npm install --save moment
 ```
 
+**index.js**
 ```javascript
 var http = require('http');
 var greet = require('./greet.js');
