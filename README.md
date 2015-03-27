@@ -147,6 +147,51 @@ $ npm init
 
 $ npm install --save express
 $ npm install --save express-session
+$ npm install --save body-parser
 
 $ touch index.js
+```
+
+**index.js**
+```javascript
+var express = require('express');
+var session = require('express-session');
+var bodyParser = require('body-parser');
+var app = express();
+
+app.use(session({secret: 'ntu-ieee'}));
+app.use(bodyParser.urlencoded({ extended: false }));
+
+var tasks = [];
+tasks.push('Step 1: Learn Node');
+tasks.push('Step 2: Learn NPM');
+tasks.push('Step 3: Learn Express');
+
+app.get('/', function (req, res) {
+	if (!req.session.tasks) {
+		console.log('No session');
+		req.session.tasks = tasks;
+	} else {
+		console.log('Session found');
+	}
+	res.json({tasks: req.session.tasks});
+});
+
+app.post('/task', function (req, res) {
+	var _tasks = [];
+	if (!req.session.tasks) {
+		_tasks = tasks;
+	} else {
+		console.log('Session found');
+		_tasks = req.session.tasks;
+	}
+	console.log(req.body);
+	_tasks.push(req.body.task);
+	req.session.tasks = _tasks;
+	res.json(req.session.tasks);
+});
+
+app.listen(3000, function () {
+	console.log('API server started on port 3000');
+});
 ```
