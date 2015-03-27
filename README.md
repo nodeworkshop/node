@@ -1,5 +1,21 @@
-# node
+# Node.js
 Lab code for the Node.js workshop
+
+## Lab 2.1: Test the waters via REPL
+```
+$ node
+
+> var a = [1, 2, 3];
+
+> console.log(a);
+[ 1, 2, 3 ]
+
+> a.forEach(function (z) { console.log(z); });
+1
+2
+3
+```
+You can exit the REPL using typing `.exit` or pressing `Ctrl` + `D`
 
 ## Lab 2.2: Baby-steps
 Building the classic Hello World
