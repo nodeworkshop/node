@@ -2,9 +2,13 @@
 Lab code for the Node.js workshop
 
 ## Lab 2.1: Test the waters via REPL
+Start up the REPL by typing `node` in your command line:
 ```
 $ node
+```
 
+Then try out these Javascript commands:
+```
 > var a = [1, 2, 3];
 
 > console.log(a);
@@ -15,7 +19,9 @@ $ node
 2
 3
 ```
-You can exit the REPL using typing `.exit` or pressing `Ctrl` + `D`
+Please disregard the `undefined` statements you see when you type in each command. For more info, check out this [stackoverflow post](http://stackoverflow.com/a/8457476).
+
+You can exit the REPL using typing `.exit` or pressing `Ctrl` + `D`.
 
 ## Lab 2.2: Baby-steps
 Building the classic Hello World
