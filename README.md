@@ -2,7 +2,7 @@
 Lab code for the Node.js workshop
 
 ## Lab 2.1: Test the waters via REPL
-##### The Read–Eval–Print Loop
+#### The Read–Eval–Print Loop
 Start up the REPL by typing `node` in your command line:
 ```
 $ node
@@ -25,7 +25,7 @@ Please disregard the `undefined` statements you see when you type in each comman
 You can exit the REPL using typing `.exit` or pressing `Ctrl` + `D`.
 
 ## Lab 2.2: Baby-steps
-##### Building the classic Hello World
+#### Building the classic Hello World
 
 Create a `hello` folder and go into it:
 ```
@@ -50,7 +50,7 @@ $ node index.js
 ```
 
 ## Lab 2.3: Requiring things
-##### Modifying your previous Hello World example
+#### Modifying your previous Hello World example
 
 In that `hello` folder, create a new file called `greet.js`:
 ```
@@ -79,7 +79,9 @@ $ node index.js
 ```
 
 ## Lab 2.4: Requiring things
-Let’s get bilingual
+#### Let’s get bilingual
+
+Modify the `greet.js` and `index.js` files as follows:
 
 **greet.js**
 ```javascript
@@ -95,6 +97,11 @@ exports.konbanwa = function () {
 var greet = require('./greet.js');
 console.log(greet.hello());
 console.log(greet.konbanwa());
+```
+
+Hopefully by now, you should already be familiar with how to run your application. In case you don't, here's the command one last time:
+```
+$ node index.js
 ```
 
 ## Lab 2.5: Requiring things
