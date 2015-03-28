@@ -2,6 +2,7 @@
 Lab code for the Node.js workshop
 
 ## Lab 2.1: Test the waters via REPL
+##### The Read–Eval–Print Loop
 Start up the REPL by typing `node` in your command line:
 ```
 $ node
@@ -24,11 +25,28 @@ Please disregard the `undefined` statements you see when you type in each comman
 You can exit the REPL using typing `.exit` or pressing `Ctrl` + `D`.
 
 ## Lab 2.2: Baby-steps
-Building the classic Hello World
+##### Building the classic Hello World
+
+Create a `hello` folder and go into it:
+```
+$ mkdir hello && cd hello
+```
+
+Next, create an empty `index.js` file in that folder:
+```
+$ touch index.js
+```
+
+Type the following line into the `index.js` file:
 
 **index.js**
 ```javascript
 console.log('Hello NTU');
+```
+
+Finally, execute the file by running:
+```
+node index.js
 ```
 
 ## Lab 2.3: Requiring things
@@ -145,7 +163,7 @@ console.log('Server running at http://127.0.0.1:8000');
 ## Lab 2.10: Building an API server
 To list and save tasks. And yay! Finally done with the Hello World! :relieved:
 
-Create a `tasks` directory and go into it:
+Create a `tasks` folder and go into it:
 ```
 $ mkdir tasks && cd tasks
 ```
