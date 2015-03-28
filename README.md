@@ -139,16 +139,23 @@ console.log('Server running at http://127.0.0.1:8000');
 ## Lab 2.10: Building an API server
 To list and save tasks. And yay! Finally done with the Hello World!
 
+Create a `tasks` directory and go into it:
 ```
 $ mkdir tasks && cd tasks
+```
 
+Initialize the project with `npm init`
+```
 $ npm init
-...
+```
 
-$ npm install --save express
-$ npm install --save express-session
-$ npm install --save body-parser
+Import the `express`, `express-session`, and `body-parser` packages into your project:
+```
+$ npm install --save express express-session body-parser
+```
 
+Finally, create an empty `index.js` file:
+```
 $ touch index.js
 ```
 
