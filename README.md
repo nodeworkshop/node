@@ -78,7 +78,7 @@ Finally, execute your application by:
 $ node index.js
 ```
 
-## Lab 2.4: Requiring things
+## Lab 2.4: Requiring things (again)
 #### Let’s get bilingual
 
 Modify the `greet.js` and `index.js` files as follows:
@@ -104,7 +104,7 @@ Hopefully by now, you should already be familiar with how to run your applicatio
 $ node index.js
 ```
 
-## Lab 2.5: Requiring things
+## Lab 2.5: Requiring things (one last time)
 Another way of handling exports
 
 **greet.js**
