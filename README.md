@@ -44,13 +44,20 @@ Type the following line into the `index.js` file:
 console.log('Hello NTU');
 ```
 
-Finally, execute the file by running:
+Finally, save and exit the file. Once at the command line, execute your application by running:
 ```
-node index.js
+$ node index.js
 ```
 
 ## Lab 2.3: Requiring things
-Modifying your previous Hello World example
+##### Modifying your previous Hello World example
+
+In that `hello` folder, create a new file called `greet.js`:
+```
+$ touch greet.js
+```
+
+Type the following lines into the `greet.js` file:
 
 **greet.js**
 ```javascript
@@ -58,10 +65,17 @@ exports.hello = function () {
 	return 'Hello NTU';
 }
 ```
+Next, open up your `index.js` file and modify it so it looks like:
+
 **index.js**
 ```javascript
 var greet = require('./greet.js');
 console.log(greet.hello());
+```
+
+Finally, execute your application by:
+```
+$ node index.js
 ```
 
 ## Lab 2.4: Requiring things
