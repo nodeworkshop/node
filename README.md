@@ -230,39 +230,52 @@ var session = require('express-session');
 var bodyParser = require('body-parser');
 var app = express();
 
+// Middleware for handling session/cookies
 app.use(session({secret: 'ntu-ieee'}));
-app.use(bodyParser.urlencoded({ extended: false }));
 
-var tasks = [];
-tasks.push('Step 1: Learn Node');
-tasks.push('Step 2: Learn NPM');
-tasks.push('Step 3: Learn Express');
+// Middleware for handling the POST requests
+app.use(bodyParser.urlencoded({extended: false}));
+
+// In real life, this is usually some form of DB call.
+function initializeTasks() {
+	var tasks = [];
+	tasks.push('Step 1: Learn Node');
+	tasks.push('Step 2: Learn NPM');
+	tasks.push('Step 3: Learn Express');
+	return tasks;
+}
 
 app.get('/', function (req, res) {
 	if (!req.session.tasks) {
-		console.log('No session');
-		req.session.tasks = tasks;
-	} else {
-		console.log('Session found');
+		// Tasks not found in session, so initialize it with an array of tasks
+		req.session.tasks = initializeTasks();
 	}
+
+	// Returns a JSON object with an array of tasks
 	res.json({tasks: req.session.tasks});
 });
 
 app.post('/task', function (req, res) {
-	var _tasks = [];
 	if (!req.session.tasks) {
-		_tasks = tasks;
-	} else {
-		console.log('Session found');
-		_tasks = req.session.tasks;
+		// Tasks not found in session, so initialize it with an array of tasks
+		req.session.tasks = initializeTasks();
 	}
-	console.log(req.body);
-	_tasks.push(req.body.task);
-	req.session.tasks = _tasks;
-	res.json(req.session.tasks);
+
+	// Assign the POSTed task to the newTask variable
+	var newTask = req.body.task;
+	
+	// Save the new task to the session array of tasks
+	req.session.tasks.push(newTask);
+
+	// Returns a JSON object with an array of tasks
+	res.json({tasks: req.session.tasks});
 });
 
 app.listen(3000, function () {
 	console.log('API server started on port 3000');
 });
 ```
+
+This time around, after `node index.js`, you'll need to access your API server on port `3000`.
+
+While you can view the list of tasks via your browser (`http://localhost:3000`), it's best to use an application like [Postman](https://www.getpostman.com/features) to fully test both the **GET** and **POST** functions of your app.
