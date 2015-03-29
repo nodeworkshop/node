@@ -174,6 +174,8 @@ http.createServer(function (req, res) {
 console.log('Server running at http://127.0.0.1:8000');
 ```
 
+Just like lab 2.6 (and all labs following this), run your application by typing `node index.js` and go to `http://127.0.0.1:8000` using a web browser.
+
 ## Lab 2.9: Expressive greetings
 Modify your Hello World code to use Express
 
