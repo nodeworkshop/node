@@ -105,7 +105,7 @@ $ node index.js
 ```
 
 ## Lab 2.5: Requiring things (one last time)
-Another way of handling exports
+#### Another way of handling exports
 
 **greet.js**
 ```javascript
@@ -119,8 +119,8 @@ module.exports = {
 }
 ```
 
-## Lab 2.6: Create a better (Hello) World
-By building a web server
+## Lab 2.6: Creating a better (Hello) World
+#### By building a web server
 
 **index.js**
 ```javascript
@@ -134,6 +134,10 @@ http.createServer(function (req, res) {
 
 console.log('Server running at http://127.0.0.1:8000');
 ```
+
+This time around, after you've run `node index.js`, launch your favorite web browser and go to `http://127.0.0.1:8000`.
+
+Congratulations! You've just built your very own web server! :thumbsup:
 
 ## Lab 2.7: Initializing your Hello World project
 It's just `npm init`... easy peasy :)
