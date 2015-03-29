@@ -1,5 +1,9 @@
 # Node.js
-Lab code for the Node.js workshop
+The following labs are part of a Node.js workshop held at Nanyang Technological Unviversity, Singapore on 27th March 2015.
+
+Accompanying slides are available at: http://www.slideshare.net/quhan/nodejs-workshop-46416648
+
+Please take a look at the [Setup](https://github.com/nodeworkshop/setup) instructions if you haven't installed Node.js on your machine.
 
 ## Lab 2.1: Test the waters via REPL
 #### The Read–Eval–Print Loop
