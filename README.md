@@ -140,7 +140,7 @@ This time around, after you've run `node index.js`, launch your favorite web bro
 Congratulations! You've just built your very own web server! :thumbsup:
 
 ## Lab 2.7: Initializing your Hello World project
-Easy peasy... just type the following in your `hello`:
+Easy peasy... just type the following in your `hello` folder:
 
 ```
 $ npm init
