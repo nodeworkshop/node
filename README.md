@@ -139,6 +139,8 @@ This time around, after you've run `node index.js`, launch your favorite web bro
 
 Congratulations! You've just built your very own web server! :thumbsup:
 
+Remember to quit your Node application by pressing `Ctrl`+`C`.
+
 ## Lab 2.7: Initializing your Hello World project
 #### With metadata
 
