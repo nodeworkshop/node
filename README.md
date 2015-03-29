@@ -1,5 +1,5 @@
 # Node.js
-The following labs are part of a Node.js workshop held at Nanyang Technological Unviversity, Singapore on 27th March 2015.
+The following labs are part of a Node.js workshop held at Nanyang Technological University, Singapore on 27th March 2015.
 
 Accompanying slides are available at: http://www.slideshare.net/quhan/nodejs-workshop-46416648
 
