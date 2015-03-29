@@ -140,6 +140,8 @@ This time around, after you've run `node index.js`, launch your favorite web bro
 Congratulations! You've just built your very own web server! :thumbsup:
 
 ## Lab 2.7: Initializing your Hello World project
+#### With metadata
+
 Easy peasy... just type the following in your `hello` folder:
 
 ```
@@ -149,11 +151,14 @@ $ npm init
 Once it's done, `npm init` will generate a `package.json` file in your folder. This file contains metadata for your application.
 
 ## Lab 2.8: Saving the moment
-Installing and using a 3rd party module
+#### Installing and using a 3rd party module
 
+Run the following command to import this 3rd party module from the NPM registry over to your app:
 ```
 $ npm install --save moment
 ```
+
+Note that the `--save` in the command will add this as a **dependency** to your app's `package.json` file.
 
 **index.js**
 ```javascript
