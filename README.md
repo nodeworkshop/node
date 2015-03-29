@@ -140,7 +140,13 @@ This time around, after you've run `node index.js`, launch your favorite web bro
 Congratulations! You've just built your very own web server! :thumbsup:
 
 ## Lab 2.7: Initializing your Hello World project
-It's just `npm init`... easy peasy :)
+Easy peasy... just type the following in your `hello`:
+
+```
+$ npm init
+```
+
+Once it's done, `npm init` will generate a `package.json` file in your folder. This file contains metadata for your application.
 
 ## Lab 2.8: Saving the moment
 Installing and using a 3rd party module
